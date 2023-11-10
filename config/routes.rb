@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      get 'insta/confirm' =>'insta#confirm'
+      post 'insta/notice' => 'insta#webhook_notice'
+    end
+  end
   get 'admin/index'
   get 'admin/login'
   get 'admin/logout'
@@ -10,4 +16,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "home#index"
+  get 'home/login'
+
 end
