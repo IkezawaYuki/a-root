@@ -28,6 +28,6 @@ production:
   reconnect: false
   database: a_root
   pool: 5
-  username: root
-  password:
-  host: localhost
+  username: yuki
+  password: ike35268
+  host: 162.43.46.67
