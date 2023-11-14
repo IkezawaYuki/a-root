@@ -30,4 +30,4 @@ production:
   pool: 5
   username: yuki
   password: ike35268
-  host: 162.43.46.67
+  host: localhost
