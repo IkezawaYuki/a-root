@@ -20,7 +20,9 @@ module ARoot
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
-    #
+
+    config.hosts << "sd-a-root.info"
+
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
