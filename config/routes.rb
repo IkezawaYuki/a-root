@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'insta/confirm' =>'insta#confirm'
-      post 'insta/notice' => 'insta#webhook_notice'
+      get 'insta/webhooks' =>'insta#confirm'
+      post 'insta/webhooks' => 'insta#webhook_notice'
     end
   end
   get 'admin/index'
