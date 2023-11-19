@@ -25,5 +25,9 @@ module ARoot
 
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.google_client_id = ENV["GOOGLE_CLIENT_ID"]
+    config.facebook_app_id = ENV["FACEBOOK_APP_ID"]
+    config.facebook_app_secret = ENV["FACEBOOK_APP_SECRET"]
   end
 end

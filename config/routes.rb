@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "home#index"
   get 'home/login'
-
+  post "home/auth" => "home#auth"
+  get "home/logout" =>"home#logout"
+  post "home/facebook_auth" =>"home#facebook_auth"
 end

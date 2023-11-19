@@ -1,5 +1,10 @@
 <% @customers.each { |costomer| %>
   <p><%= costomer.id %></p>
   <p><%= costomer.name %></p>
-  <p><%= costomer.wordpress %></p>
+  <p><%= costomer.user_id %></p>
+  <p><%= costomer.wordpress_url %></p>
+  <p><%= costomer.facebook_token %></p>
+  <p><%= costomer.status %></p>
 <% } %>
+
+<div class="fb-login-button" data-width="300" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>

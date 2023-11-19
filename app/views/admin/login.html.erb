@@ -1,2 +1,44 @@
-<h1>Admin#login</h1>
-<p>Find me in app/views/admin/login.html.erb</p>
+
+<section class="container">
+    <h1 class="my-5 py-5 text-center"><img alt="logo" width="32px" src="<%= asset_path 'sd.png' %>"> SD A-Root</h1>
+<!--    <div class="my-5 py-5 text-center">-->
+<!--      <button class="btn btn-primary"><i class="me-2 fa fa-facebook facebook-icon" aria-hidden="true"></i>Facebookでログイン</button>-->
+<!--    </div>-->
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <script>
+      function handleCredentialResponse(response) {
+          console.log("Encoded JWT ID token: " + response.credential);
+      }
+      window.onload = function () {
+          google.accounts.id.initialize({
+              client_id: "833049088433-acug9f9ujg4i245kg5rtud3jvk2rpplg.apps.googleusercontent.com",
+              callback: handleCredentialResponse
+          });
+          google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),
+            { theme: "outline", size: "large" }  // customization attributes
+          );
+          google.accounts.id.prompt(); // also display the One Tap dialog
+      }
+  </script>
+  <div class="d-flex justify-content-center">
+    <div style="width: 180px; margin: auto 0;" id="buttonDiv"></div>
+  </div>
+  <div id="g_id_onload"
+       data-client_id="833049088433-acug9f9ujg4i245kg5rtud3jvk2rpplg.apps.googleusercontent.com"
+       data-login_uri="https://sd-a-root.info/home/auth"
+       data-auto_prompt="false">
+  </div>
+  <div class="g_id_signin"
+       data-type="standard"
+       data-size="large"
+       data-theme="outline"
+       data-text="sign_in_with"
+       data-shape="rectangular"
+       data-logo_alignment="left">
+  </div>
+
+</section>
+
+
+
